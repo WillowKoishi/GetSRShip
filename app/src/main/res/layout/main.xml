@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="top|center"
+	android:orientation="vertical"
+	app:popupTheme="@style/AppTheme.PopupOverlay"
+	android:background="#FFFFFF">
+
+	<include
+		layout="@layout/toolbar"/>
+
+	<LinearLayout
+		style="?android:attr/buttonBarStyle"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal">
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="载具"
+			android:layout_weight="1.0"
+			android:onClick="ship"/>
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="沙盒"
+			android:layout_weight="1.0"
+			android:onClick="sandbox"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="match_parent"
+		android:layout_width="wrap_content">
+
+		<RelativeLayout
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:visibility="visible"
+			android:id="@+id/ship">
+
+			<EditText
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:hint="请输入六位数载具id"
+				android:maxLines="1"
+				android:maxEms="6"
+				android:id="@+id/mainEditText1"
+				android:layout_centerInParent="true"
+				android:maxLength="6"
+				android:digits="0123456789"
+				android:inputType="number"
+				android:gravity="center"
+				android:translationY="-47dp"
+				android:textColor="#000000"
+				android:textColorHint="#6E6E6E"/>
+
+			<Button
+				style="?android:attr/buttonBarButtonStyle"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="下载"
+				android:layout_below="@id/mainEditText1"
+				android:layout_centerInParent="true"
+				android:onClick="get"/>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:visibility="gone"
+			android:id="@+id/sandbox">
+
+			<EditText
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:hint="请输入六位数存档id"
+				android:maxLines="1"
+				android:maxEms="6"
+				android:id="@+id/mainEditText2"
+				android:layout_centerInParent="true"
+				android:maxLength="6"
+				android:digits="0123456789"
+				android:inputType="number"
+				android:gravity="center"
+				android:translationY="-47dp"
+				android:textColor="#000000"
+				android:textColorHint="#6E6E6E"/>
+
+			<Button
+				style="?android:attr/buttonBarButtonStyle"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="下载"
+				android:layout_below="@id/mainEditText2"
+				android:layout_centerInParent="true"
+				android:onClick="get2"/>
+
+		</RelativeLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

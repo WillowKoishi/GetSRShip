@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="AppTheme" parent="Theme.AppCompat.Light">
+		<item name="colorPrimary">@color/colorPrimary2</item>
+        <item name="colorPrimaryDark">@color/colorPrimary2</item>
+        <item name="colorAccent">@color/colorAccent</item>
+			
+		</style>
+	<style name="TestAppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimary">#2A95F7</item>
+        <item name="colorPrimaryDark">#0E76DF</item>
+        <item name="colorAccent">#007EFF</item>
+		<item name="android:windowBackground">@android:color/white</item>
+
+    </style>
+	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" >
+		<item name="android:textColor">@color/colorPrimary</item>
+	</style>
+</resources>

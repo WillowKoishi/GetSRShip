@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.0"
+
+    defaultConfig {
+        applicationId "willow.getSimplerocketsShip.koishi"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 5141
+        versionName "1.1Koishi"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+dependencies {
+	compile 'com.android.support:appcompat-v7:+'
+}
