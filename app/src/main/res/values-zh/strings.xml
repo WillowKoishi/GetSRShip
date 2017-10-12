@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GSRS2</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="appname">SR下载器2</string>
+	<string name="about">关于</string>
+	<string name="whatnew">更新内容</string>
+	<string name="new_">版本v2.0\n·完全修改了应用风格\n·增加ΔV计算器\n·修复了同时增加了一些bug\n感谢Kally的技术滋瓷</string>
+</resources>

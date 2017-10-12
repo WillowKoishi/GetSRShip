@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">GetSRShip</string>
+    <string name="app_name">GSRS2</string>
     <string name="hello_world">Hello world!</string>
-
+    <string name="appname">GetSRShip</string>
+	<string name="about">About</string>
+	<string name="whatnew">What is new</string>
+	<string name="new_">Version2.0\n·New APP theme\n·Add ΔV calculater\n·Reduce and Add many bugs\nThinks For Kally Support</string>
 </resources>

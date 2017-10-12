@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="willow.getSimplerocketsShip.koishi"
-    android:versionCode="5141"
-    android:versionName="1.1Koishi" >
+    android:versionCode="5142"
+    android:versionName="2.0 Satori" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -12,11 +12,10 @@
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/TestAppTheme" >
         <activity
             android:name="willow.getSimplerocketsShip.koishi.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/TestAppTheme" >
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -8,8 +8,8 @@ android {
         applicationId "willow.getSimplerocketsShip.koishi"
         minSdkVersion 14
         targetSdkVersion 21
-        versionCode 5141
-        versionName "1.1Koishi"
+        versionCode 5142
+        versionName "2.0 Satori"
     }
     buildTypes {
         release {
@@ -19,7 +19,7 @@ android {
     }
 }
 
-
 dependencies {
 	compile 'com.android.support:appcompat-v7:+'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 }
