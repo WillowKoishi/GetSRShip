@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="willow.getSimplerocketsShip.koishi"
-    android:versionCode="5142"
-    android:versionName="2.0 Satori" >
+    android:versionCode="5143"
+    android:versionName="2.0 Satori Building" >
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="21" />
+        android:targetSdkVersion="21"
+        tools:overrideLibrary="android.support.graphics.drawable.animated,android.support.v4,android.support.compat,android.support.mediacompat,android.support.coreutils,android.support.coreui,android.support.fragment" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="25.3.1" />
 
     <application
         android:allowBackup="true"

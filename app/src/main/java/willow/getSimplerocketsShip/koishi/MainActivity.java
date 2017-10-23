@@ -9,24 +9,32 @@ import android.support.v7.app.AlertDialog;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.View;
+import android.widget.ListView;
+import android.support.v4.app.*;
+import willow.getSimplerocketsShip.koishi.fragment.*;
+import java.util.*;
+import android.content.pm.*;
+import android.content.*;
 
 public class MainActivity extends AppCompatActivity 
 {private Toolbar toolbar;
 private DrawerLayout dl;
-    @Override
+private ListView ls;
+private boolean canOpenSR;
+   @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+		canOpenSR=loadApps();
 		dl=(DrawerLayout)this.findViewById(R.id.drawer_layout);
 		toolbar=(Toolbar)this.findViewById(R.id.toolbar);
+		ls=(ListView)this.findViewById(R.id.left_drawer);
 		toolbar.setTitle(R.string.appname);
 		toolbar.setPopupTheme(R.style.ThemeOverlay_AppCompat_Light);
 		setSupportActionBar(toolbar);
 		getSupportActionBar().setHomeButtonEnabled(true); //设置返回键可用
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		
-    
 	ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, dl, toolbar,R.string.whatnew , R.string.about) {
 		@Override
 		public void onDrawerOpened(View drawerView) {
@@ -41,6 +49,12 @@ private DrawerLayout dl;
 		drawerToggle.syncState();
         //绑定监听器
         dl.setDrawerListener(drawerToggle);
+		FragmentManager fm=getSupportFragmentManager();
+		FragmentTransaction transaction = fm.beginTransaction();
+	   GetSRShip ef1=new GetSRShip(); /* * add是将一个fragment实例添加到Activity的最上层 * replace替换containerViewId中的fragment实例， * 注意，它首先把containerViewId中所有fragment删除，然后再add进去当前的fragment * */
+	   ef1.pushSR(canOpenSR);
+	   transaction.add(R.id.main_fragment, ef1);
+	   transaction.commit();
 }
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
@@ -62,5 +76,23 @@ private DrawerLayout dl;
 				break;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	private List<ResolveInfo> apps = new ArrayList<>();
+	private boolean loadApps() {
+		boolean sr=false;
+		Intent intent = new Intent(Intent.ACTION_MAIN, null);
+		intent.addCategory(Intent.CATEGORY_LAUNCHER);
+		apps =getPackageManager().queryIntentActivities(intent, 0);
+		for (int i = 0; i < apps.size(); i++) {
+			ResolveInfo info = apps.get(i);
+			String packageName = info.activityInfo.packageName;
+			//CharSequence cls = info.activityInfo.name;
+			//CharSequence name = info.activityInfo.loadLabel(getPackageManager());
+			if(packageName.indexOf("com.jundroo.simplerockets")!=-1){
+				sr=true;
+			}
+			//Log.e("ddddddd",name+"----"+packageName+"----"+cls);
+		}
+		return sr;
 	}
 }

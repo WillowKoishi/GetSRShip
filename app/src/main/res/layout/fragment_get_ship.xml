@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center">
+
+	<android.support.v7.widget.AppCompatEditText
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:singleLine="true"
+		android:numeric="integer"
+		android:maxLength="6"
+		android:ems="10"
+		android:id="@+id/frame_getship_edit"
+		android:layout_gravity="center"
+		android:hint="@string/hint_getship"/>
+
+	<Button
+		style="?android:attr/buttonBarButtonStyle"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:id="@+id/frame_getship_button"
+		android:text="@string/get"/>
+
+</LinearLayout>
+

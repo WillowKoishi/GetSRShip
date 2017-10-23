@@ -8,8 +8,8 @@ android {
         applicationId "willow.getSimplerocketsShip.koishi"
         minSdkVersion 14
         targetSdkVersion 21
-        versionCode 5142
-        versionName "2.0 Satori"
+        versionCode 5143
+        versionName "2.0 Satori Building"
     }
     buildTypes {
         release {

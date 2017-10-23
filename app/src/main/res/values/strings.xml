@@ -7,4 +7,7 @@
 	<string name="about">About</string>
 	<string name="whatnew">What is new</string>
 	<string name="new_">Version2.0\n·New APP theme\n·Add ΔV calculater\n·Reduce and Add many bugs\nThinks For Kally Support</string>
+	<string name="get">Get</string>
+	<string name="hint_getship">Type your ship ID</string>
+	<string name="hasnot">You have not SimpleRockets:(</string>
 </resources>
