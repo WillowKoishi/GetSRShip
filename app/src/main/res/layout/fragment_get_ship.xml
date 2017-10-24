@@ -15,14 +15,14 @@
 		android:ems="10"
 		android:id="@+id/frame_getship_edit"
 		android:layout_gravity="center"
-		android:hint="@string/hint_getship"/>
+		/>
 
-	<Button
+	<android.support.v7.widget.AppCompatButton
 		style="?android:attr/buttonBarButtonStyle"
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
 		android:id="@+id/frame_getship_button"
-		android:text="@string/get"/>
+		/>
 
 </LinearLayout>
 

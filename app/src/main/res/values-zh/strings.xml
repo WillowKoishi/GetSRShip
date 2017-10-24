@@ -9,4 +9,7 @@
 	<string name="get">获取</string>
 	<string name="hint_getship">请输入6位火箭ID</string>
 	<string name="hasnot">你还没有安装简单火箭:(</string>
+	<string name="item_getship">获取存档</string>
+	<string name="item_getsandbox">获取沙盒</string>
+	<string name="item_DV">∆V计算器</string>
 </resources>

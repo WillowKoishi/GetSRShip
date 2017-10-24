@@ -15,7 +15,7 @@
 
 		<include
 			layout="@layout/toolbar"
-			android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+			/>
 		<FrameLayout
 			android:id="@+id/main_fragment"
 			android:layout_width="match_parent"
