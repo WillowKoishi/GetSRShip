@@ -6,4 +6,8 @@
         android:title="@string/about"
         android:orderInCategory="0"
         app:showAsAction="never|collapseActionView" />
+	<item
+        android:id="@+id/toolbar_exit"
+        android:title="@string/quit"
+        app:showAsAction="never|collapseActionView" />
 </menu>

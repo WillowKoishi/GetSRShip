@@ -18,18 +18,18 @@ import android.content.*;
 import android.widget.*;
 import android.view.*;
 import android.view.inputmethod.*;
-
 public class MainActivity extends AppCompatActivity 
 {private Toolbar toolbar;
 	private DrawerLayout dl;
 	private ListView ls;
 	private boolean canOpenSR;
-
 	private GetSRShip ef1;
 
 	private GetSandbox ef2;
 
 	private FragmentTransaction transaction;
+
+	private DeltaVCalculater ef3;
 	@Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -67,11 +67,14 @@ public class MainActivity extends AppCompatActivity
 		ef1.pushSR(canOpenSR);
 		ef2=new GetSandbox();
 		ef2.pushSR(canOpenSR);
+		ef3=new DeltaVCalculater();
 		if(savedInstanceState==null){
 		transaction.add(R.id.main_fragment, ef1);
 		transaction.add(R.id.main_fragment,ef2);
+		transaction.add(R.id.main_fragment,ef3);
 		}
 		transaction.hide(ef2);
+		transaction.hide(ef3);
 		transaction.commit();	
 		ls = (ListView)this.findViewById(R.id.left_drawer);
 		String[] commoFunList = new String[]{
@@ -86,25 +89,31 @@ public class MainActivity extends AppCompatActivity
 				public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4)
 				{FragmentManager fm=getSupportFragmentManager();
 					transaction = fm.beginTransaction();
+					transaction.hide(ef1);
+					transaction.hide(ef2);
+					transaction.hide(ef3);
 					switch((int)(p4)){
 						case 0:
-							transaction.hide(ef2);
 							transaction.show(ef1);
 							//transaction.commit();
 							break;
 						case 1:
-							transaction.hide(ef1);
 							transaction.show(ef2);
 							//transaction.commit();
 							break;
 						case 2:
+							transaction.show(ef3);
 							break;
 					}
 					transaction.commit();
 					dl.closeDrawer(Gravity.LEFT);
 				}
 			});
-		}
+//		InputMethodManager inputMethodManager = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+//		inputMethodManager.hideSoftInputFromWindow(MainActivity.this.getCurrentFocus().getWindowToken()
+//												   ,InputMethodManager.HIDE_NOT_ALWAYS);
+//		
+			}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{getMenuInflater().inflate(R.menu.menu1, menu);
@@ -124,6 +133,9 @@ public class MainActivity extends AppCompatActivity
 				builder.setPositiveButton("确定", null);
 				builder.show();
 				//Toast.makeText(this, "收藏", Toast.LENGTH_SHORT).show();
+				break;
+			case R.id.toolbar_exit:
+				finish();
 				break;
 		}
 		return super.onOptionsItemSelected(item);

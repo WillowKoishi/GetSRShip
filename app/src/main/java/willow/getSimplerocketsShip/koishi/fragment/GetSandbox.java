@@ -7,12 +7,15 @@ import android.support.v7.widget.*;
 import android.view.View.*;
 import android.content.*;
 import android.net.*;
+import android.support.design.widget.*;
+import android.widget.*;
 
 public class GetSandbox extends Fragment
 {
-	private AppCompatEditText aet;
+	private TextInputEditText aet;
 	private AppCompatButton b;
 	private boolean can;
+	private TextInputLayout til;
 	public void pushSR(boolean loadApps)
 	{
 		can = loadApps;
@@ -21,9 +24,11 @@ public class GetSandbox extends Fragment
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
 		View view=inflater.inflate(R.layout.fragment_get_ship, container, false);
-		aet = (AppCompatEditText)view.findViewById(R.id.frame_getship_edit);
+		aet = (TextInputEditText)view.findViewById(R.id.frame_getship_edit);
 		b = (AppCompatButton)view.findViewById(R.id.frame_getship_button);
-		aet.setHint(R.string.hint_getsandbox);
+		til=(TextInputLayout)view.findViewById(R.id.fragment_til);
+		til.setHint(this.getString(R.string.hint_getsandbox));
+		//aet.setHint(R.string.hint_getsandbox);
 		b.setText(R.string.get);
 		if (!can)
 		{

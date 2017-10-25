@@ -5,6 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="appname">GetSRShip</string>
 	<string name="about">About</string>
+	<string name="quit">Quit</string>
 	<string name="whatnew">What is new</string>
 	<string name="new_">Version2.0\n·New APP theme\n·Add ΔV calculater\n·Reduce and Add many bugs\nThinks For Kally Support</string>
 	<string name="get">Get</string>
@@ -14,4 +15,8 @@
 	<string name="item_getship">Download Ship</string>
 	<string name="item_getsandbox">Download Sandbox</string>
 	<string name="item_DV">∆V Calculater</string>
+	<string name="isp">Specific impulse</string>
+	<string name="m">Total weight</string>
+	<string name="m0">Empty weight</string>
+	<string name="g">Gravitational acceleration</string>
 </resources>
