@@ -11,18 +11,40 @@
 		android:layout_width="match_parent"
 		android:orientation="vertical">
 
-		<TextView
+		<RelativeLayout
 			android:layout_height="100dp"
-			android:textAppearance="?android:attr/textAppearanceLarge"
 			android:layout_width="match_parent"
-			android:gravity="center"
-			android:background="@color/colorAccent"
-			android:textColor="@color/textColorPrimary"
-			android:id="@+id/fragmentdeltavTextView1"/>
+			android:gravity="bottom|right">
+
+			<TextView
+				android:layout_height="100dp"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="match_parent"
+				android:gravity="center"
+				android:background="@color/colorPrimary"
+				android:text="@string/input_data"
+				android:textColor="@color/textColorPrimary"
+				android:id="@+id/fragmentdeltavTextView1"
+				android:layout_alignParentBottom="true"
+				android:layout_alignParentLeft="true"/>
+
+			<Button
+				style="?android:attr/buttonBarButtonStyle"
+				android:layout_height="35dp"
+				android:layout_width="wrap_content"
+				android:text="@string/reference"
+				android:layout_alignParentBottom="true"
+				android:layout_alignParentRight="true"
+				android:textColor="@color/textColorPrimary"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:id="@+id/reference"/>
+
+		</RelativeLayout>
 
 		<android.support.design.widget.TextInputLayout
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content">
+			android:layout_height="wrap_content"
+			android:id="@+id/fragmentdeltavTextInputLayout1">
 
 			<EditText
 				android:layout_height="wrap_content"
@@ -36,7 +58,8 @@
 
 		<android.support.design.widget.TextInputLayout
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content">
+			android:layout_height="wrap_content"
+			android:id="@+id/fragmentdeltavTextInputLayout2">
 
 			<EditText
 				android:layout_height="wrap_content"
@@ -47,9 +70,11 @@
 				android:id="@+id/fragment_deltav_m"/>
 
 		</android.support.design.widget.TextInputLayout>
+
 		<android.support.design.widget.TextInputLayout
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content">
+			android:layout_height="wrap_content"
+			android:id="@+id/fragmentdeltavTextInputLayout3">
 
 			<EditText
 				android:hint="@string/m0"
@@ -60,9 +85,11 @@
 				android:id="@+id/fragment_deltav_m0"/>
 
 		</android.support.design.widget.TextInputLayout>
+
 		<android.support.design.widget.TextInputLayout
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content">
+			android:layout_height="wrap_content"
+			android:id="@+id/fragmentdeltavTextInputLayout4">
 
 			<EditText
 				android:layout_height="wrap_content"
@@ -73,6 +100,7 @@
 				android:id="@+id/fragment_deltav_g"/>
 
 		</android.support.design.widget.TextInputLayout>
+
 	</LinearLayout>
 
 </LinearLayout>
