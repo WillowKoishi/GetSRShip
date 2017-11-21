@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity
 	private ListView ls;
 	private boolean canOpenSR;
 	private GetSRShip ef1;
-
 	private GetSandbox ef2;
 
 	private FragmentTransaction transaction;
@@ -126,13 +125,14 @@ public class MainActivity extends AppCompatActivity
 		switch (item.getItemId())
 		{
 			case R.id.toolbar_about:
-				AlertDialog.Builder builder=new AlertDialog.Builder(this);
-				builder.setTitle(R.string.about);
-				builder.setMessage(R.string.new_);
-				builder.setNegativeButton("取消也没有用", null);
-				builder.setPositiveButton("确定", null);
-				builder.show();
-				//Toast.makeText(this, "收藏", Toast.LENGTH_SHORT).show();
+//				AlertDialog.Builder builder=new AlertDialog.Builder(this);
+//				builder.setTitle(R.string.about);
+//				builder.setMessage(R.string.new_);
+//				builder.setNegativeButton("取消也没有用", null);
+//				builder.setPositiveButton("确定", null);
+//				builder.show();
+//				//Toast.makeText(this, "收藏", Toast.LENGTH_SHORT).show();
+				startActivity(new Intent(this,AboutView.class));
 				break;
 			case R.id.toolbar_exit:
 				finish();

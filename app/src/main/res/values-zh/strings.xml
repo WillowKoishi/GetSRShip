@@ -21,9 +21,11 @@
 	<string name="format_error">格式错误</string>
 	<string name="reference">比冲参考值</string>
 	<string name="input_data">请输入数据</string>
-	<string name="refer_intro">这里罗列了一些发动机的比冲量，数据来源于几个航天类游戏</string>
+	<string name="refer_intro">这里罗列了一些发动机的比冲量，数据来源于几个航天类游戏,你可以直接点击列表来输入数据\n_(:з」∠)_</string>
 	<string name="simplerockets">简单火箭</string>
 	<string name="ksp">坎巴拉太空计划</string>
+	<string name="noId">你还没有输入任何内容!</string>
+	<string name="noLong">你输入的ID长度不够!</string>
 	<string-array name="sr_engine">
 		<item>Tiny 21</item>
 		<item>Tiny 87</item>

@@ -9,6 +9,10 @@ import android.view.*;
 import android.widget.*;
 import java.util.*;
 import willow.getSimplerocketsShip.koishi.*;
+import android.widget.ExpandableListView.*;
+import android.widget.TextView.*;
+import com.hanks.htextview.HTextView;
+import com.hanks.htextview.HTextViewType;
 
 public class DeltaVCalculater extends Fragment
 {private EditText isp,m,m0,g;
@@ -21,8 +25,9 @@ public class DeltaVCalculater extends Fragment
 	private List<String> groupList;
     private List<List<String>> childList;
 	private List<List<String>> ispDAta;
-
+	private HTextView ht;
 	private DeltaVCalculater.FuckingMan fuckAdapter;
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{ view = inflater.inflate(R.layout.fragment_deltav, container, false);
@@ -30,18 +35,33 @@ public class DeltaVCalculater extends Fragment
 		m = (EditText)view.findViewById(R.id.fragment_deltav_m);
 		m0 = (EditText)view.findViewById(R.id.fragment_deltav_m0);
 		g = (EditText)view.findViewById(R.id.fragment_deltav_g);
-
-		tv = (TextView)view.findViewById(R.id.fragmentdeltavTextView1);
+		ht=(HTextView)view.findViewById(R.id.text2);
+		ht.setAnimateType(HTextViewType.FALL);
+		isp.addTextChangedListener(tListener);
+		m.addTextChangedListener(tListener);
+		m0.addTextChangedListener(tListener);
+		g.addTextChangedListener(tListener);
+		//tv = (TextView)view.findViewById(R.id.fragmentdeltavTextView1);
 		ti = (TextInputLayout)view.findViewById(R.id.fragmentdeltavTextInputLayout1);
 		tm = (TextInputLayout)view.findViewById(R.id.fragmentdeltavTextInputLayout2);
 		tm0 = (TextInputLayout)view.findViewById(R.id.fragmentdeltavTextInputLayout3);
 		tg = (TextInputLayout)view.findViewById(R.id.fragmentdeltavTextInputLayout4);
 		refer = (Button)view.findViewById(R.id.reference);
-		h.postDelayed(r, 1);
+		h.postDelayed(r, 1000);
 		View view2 = View.inflate(getActivity(), R.layout.dialog_reference, null);
 		b = new AlertDialog.Builder(getActivity());
 		b.setView(view2).setTitle(R.string.reference).setMessage(R.string.refer_intro);
 		ExpandableListView referData=(ExpandableListView)view2.findViewById(R.id.dialogreferenceListView1);
+		referData.setOnChildClickListener(new OnChildClickListener(){
+
+				@Override
+				public boolean onChildClick(ExpandableListView p1, View p2, int p3, int p4, long p5)
+				{
+					isp.setText(ispDAta.get(p3).get(p4));
+					a.dismiss();
+					return true;
+				}
+			});
 		groupList = new ArrayList<>();
         childList = new ArrayList<>();
 		ispDAta = new ArrayList<>();
@@ -53,10 +73,29 @@ public class DeltaVCalculater extends Fragment
 		refer.setOnClickListener(lisener);
 		return view;
 	}
+	TextWatcher tListener=new TextWatcher(){
+
+		@Override
+		public void beforeTextChanged(CharSequence p1, int p2, int p3, int p4)
+		{
+			// TODO: Implement this method
+		}
+
+		@Override
+		public void onTextChanged(CharSequence p1, int p2, int p3, int p4)
+		{
+			// TODO: Implement this method
+		}
+
+		@Override
+		public void afterTextChanged(Editable p1)
+		{cdv();
+			// TODO: Implement this method
+		}
+	};
 	private void addData(String group, String[] engine, String[] ispdata)
 	{
         groupList.add(group);
-        //每一个item打开又是一个不同的list集合
         List<String> childitem = new ArrayList<>();
 		List<String> ispDATA=new ArrayList<>();
         for (int i = 0; i < engine.length; i++)
@@ -73,65 +112,73 @@ public class DeltaVCalculater extends Fragment
 		@Override
 		public void run()
 		{
-			h.postDelayed(r, 100);
-			if (isp.getText().toString().indexOf(".") == 0)
-			{
-				ti.setErrorEnabled(true);
-				ti.setError(getString(R.string.format_error));
-
-			}
-			else
-			{
-				ti.setErrorEnabled(false);
-				ti.setError("");
-			} 
-			if (m.getText().toString().indexOf(".") == 0)
-			{
-				tm.setErrorEnabled(true);
-				tm.setError(getString(R.string.format_error));
-
-			}
-			else
-			{
-				tm.setErrorEnabled(false);
-				tm.setError("");
-			}
-			if (m0.getText().toString().indexOf(".") == 0)
-			{
-				tm0.setErrorEnabled(true);
-				tm0.setError(getString(R.string.format_error));
-
-			}
-			else
-			{
-				tm0.setErrorEnabled(false);
-				tm0.setError("");
-			} 
-			if (g.getText().toString().indexOf(".") == 0)
-			{
-				tg.setErrorEnabled(true);
-				tg.setError(getString(R.string.format_error));
-			}
-			else
-			{
-				tg.setErrorEnabled(false);
-				tg.setError("");
-			}
-			if (!(isEmpty(isp) || isEmpty(m) || isEmpty(m0) || isEmpty(g))
-				&& !(g.getText().toString().indexOf(".") == 0 ||
-				isp.getText().toString().indexOf(".") == 0 ||
-				m.getText().toString().indexOf(".") == 0  ||
-				m0.getText().toString().indexOf(".") == 0))
-			{
-				double iisp=Double.valueOf(isp.getText().toString());
-				double mm=Double.valueOf(m.getText().toString());
-				double mm0=Double.valueOf(m0.getText().toString());
-				double gg=Double.valueOf(g.getText().toString());
-				double v=iisp * gg * Math.log(mm / (mm0));
-				tv.setText("∆V=" + v);
-			}
+			//h.postDelayed(r, 100);
+			
 		}
 	};
+	 void cdv(){
+		if (isp.getText().toString().indexOf(".") == 0)
+		{
+			ti.setErrorEnabled(true);
+			ti.setError(getString(R.string.format_error));
+
+		}
+		else
+		{
+			ti.setErrorEnabled(false);
+			ti.setError("");
+		} 
+		if (m.getText().toString().indexOf(".") == 0)
+		{
+			tm.setErrorEnabled(true);
+			tm.setError(getString(R.string.format_error));
+
+		}
+		else
+		{
+			tm.setErrorEnabled(false);
+			tm.setError("");
+		}
+		if (m0.getText().toString().indexOf(".") == 0)
+		{
+			tm0.setErrorEnabled(true);
+			tm0.setError(getString(R.string.format_error));
+
+		}
+		else
+		{
+			tm0.setErrorEnabled(false);
+			tm0.setError("");
+		} 
+		if (g.getText().toString().indexOf(".") == 0)
+		{
+			tg.setErrorEnabled(true);
+			tg.setError(getString(R.string.format_error));
+		}
+		else
+		{
+			tg.setErrorEnabled(false);
+			tg.setError("");
+		}
+		if (!(isEmpty(isp) || isEmpty(m) || isEmpty(m0) || isEmpty(g))
+			&& !(g.getText().toString().indexOf(".") == 0 ||
+			isp.getText().toString().indexOf(".") == 0 ||
+			m.getText().toString().indexOf(".") == 0  ||
+			m0.getText().toString().indexOf(".") == 0))
+		{
+			double iisp=Double.valueOf(isp.getText().toString());
+			double mm=Double.valueOf(m.getText().toString());
+			double mm0=Double.valueOf(m0.getText().toString());
+			double gg=Double.valueOf(g.getText().toString());
+			double v=iisp * gg * Math.log(mm / (mm0));
+			//tv.setText("∆V=" + v);
+			 if(ht.getVisibility()==View.GONE){
+			 ht.setVisibility(View.VISIBLE);
+			 ht.animateText(getText(R.string.input_data));
+			 }
+			 ht.animateText("∆V=" + v);
+		}
+	}
 	Handler h=new Handler(){
 
 		@Override
@@ -247,8 +294,10 @@ public class DeltaVCalculater extends Fragment
 
 		@Override
 		public boolean isChildSelectable(int groupPosition, int childPosition)
-		{
+		{//isp.setText(ispdata.get(groupPosition).get(childPosition));
+		//a.dismiss();
 			return true;
 		}
+		
 	}
 }

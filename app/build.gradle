@@ -6,10 +6,10 @@ android {
 
     defaultConfig {
         applicationId "willow.getSimplerocketsShip.koishi"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 21
         versionCode 5143
-        versionName "2.0 Satori Building"
+        versionName "2.1 Satori"
     }
     buildTypes {
         release {
@@ -20,7 +20,10 @@ android {
 }
 
 dependencies {
+	compile project(':htextview-library')
+	//compile project(':htextview-base')
 	compile 'com.android.support:design:+'
+	//compile 'hanks.xyz:htextview-library:0.1.2'
 	compile 'com.android.support:appcompat-v7:+'
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }

@@ -9,6 +9,8 @@ import android.content.*;
 import android.net.*;
 import android.support.design.widget.*;
 import android.widget.*;
+import android.text.*;
+import willow.getSimplerocketsShip.koishi.view.*;
 
 public class GetSandbox extends Fragment
 {
@@ -40,12 +42,22 @@ public class GetSandbox extends Fragment
 				public void onClick(View p1)
 				{if (can)
 					{
+						if(noEmpty(aet.getText())){
+						WiToast.showToast(getContext(),R.string.noId, 3000);
+						}
+						else if(aet.getText().length()!=6){
+						WiToast.showToast(getActivity(),R.string.noLong,3000);
+						}
+						else{
 						startActivity(new Intent().setAction(Intent.ACTION_VIEW).setData(Uri.parse("simplerockets://03" + aet.getText())));
 					}
+						}
 				}
 			});
 		//
 		return view;
 	}
-
+public boolean noEmpty(CharSequence s){
+	return TextUtils.isEmpty(s);
+}
 }

@@ -11,6 +11,8 @@ import android.widget.*;
 import java.util.*;
 import willow.getSimplerocketsShip.koishi.*;
 import android.support.design.widget.*;
+import willow.getSimplerocketsShip.koishi.view.*;
+import android.text.*;
 
 public class GetSRShip extends Fragment
 {
@@ -46,10 +48,21 @@ final TextInputLayout til=(TextInputLayout)view.findViewById(R.id.fragment_til);
 				public void onClick(View p1)
 				{if (can)
 					{
+						if(noEmpty(aet.getText())){
+							WiToast.showToast(getContext(),R.string.noId, 3000);
+						}
+						else if(aet.getText().length()!=6){
+							WiToast.showToast(getActivity(),R.string.noLong,3000);
+						}
+						else{
 						startActivity(new Intent().setAction(Intent.ACTION_VIEW).setData(Uri.parse("simplerockets://00" + aet.getText())));
+					}
 					}
 				}
 			});
 		return view;
+	}
+	public boolean noEmpty(CharSequence s){
+		return TextUtils.isEmpty(s);
 	}
 }
