@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="willow.getSimplerocketsShip.koishi"
-    android:versionCode="5143"
-    android:versionName="2.1 Satori" >
+    android:versionCode="5144"
+    android:versionName="2.2 Satori" >
 
     <uses-sdk
         android:minSdkVersion="15"
