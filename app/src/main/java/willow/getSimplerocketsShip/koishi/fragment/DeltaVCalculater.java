@@ -17,7 +17,7 @@ import com.hanks.htextview.HTextViewType;
 public class DeltaVCalculater extends Fragment
 {private EditText isp,m,m0,g;
 	private TextInputLayout ti,tm,tm0,tg;
-	private TextView tv;
+	private TextView tv,tv2;
 	private View view;
 	private Button refer;
 	private AlertDialog.Builder b;
@@ -42,6 +42,7 @@ public class DeltaVCalculater extends Fragment
 		m0.addTextChangedListener(tListener);
 		g.addTextChangedListener(tListener);
 		//tv = (TextView)view.findViewById(R.id.fragmentdeltavTextView1);
+		tv2=(TextView)view.findViewById(R.id.fragmentdeltavTextView1);
 		ti = (TextInputLayout)view.findViewById(R.id.fragmentdeltavTextInputLayout1);
 		tm = (TextInputLayout)view.findViewById(R.id.fragmentdeltavTextInputLayout2);
 		tm0 = (TextInputLayout)view.findViewById(R.id.fragmentdeltavTextInputLayout3);
@@ -172,6 +173,7 @@ public class DeltaVCalculater extends Fragment
 			double gg=Double.valueOf(g.getText().toString());
 			double v=iisp * gg * Math.log(mm / (mm0));
 			//tv.setText("∆V=" + v);
+			tv2.setVisibility(View.GONE);
 			 if(ht.getVisibility()==View.GONE){
 			 ht.setVisibility(View.VISIBLE);
 			 ht.animateText(getText(R.string.input_data));

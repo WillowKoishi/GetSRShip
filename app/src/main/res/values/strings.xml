@@ -22,6 +22,8 @@
 	<string name="format_error">False format</string>
 	<string name="reference">Isp reference</string>
 	<string name="input_data">Please input your data</string>
+	<string name="noId">You have not inpputted anything!</string>
+	<string name="noLong">You haven not completed input</string>
 	<string name="refer_intro">Here are some of the engines’ specific impulse, which comes from several games</string>
 	<string name="simplerockets">SimpleRockets</string>
 	<string name="ksp">KerbalSpaceProgram</string>
