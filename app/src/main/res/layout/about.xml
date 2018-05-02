@@ -8,10 +8,43 @@
 	<include
 		layout="@layout/toolbar"/>
 
-	<willow.getSimplerocketsShip.koishi.view.StaffView
+	<RelativeLayout
 		android:layout_height="match_parent"
-		android:layout_width="match_parent"
-		android:id="@+id/aboutStaffView1"/>
+		android:layout_width="match_parent">
+
+		<willow.getSimplerocketsShip.koishi.view.StaffView
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:id="@+id/aboutStaffView1"/>
+
+		<TextView
+			android:layout_height="52dp"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="wrap_content"
+			android:text="GetSRShip2"
+			android:layout_centerInParent="true"
+			android:id="@+id/aboutTextView1"
+			android:textColor="#FFFFFF"
+			android:gravity="center"/>
+
+		<TextView
+			android:layout_height="100dp"
+			android:layout_width="100dp"
+			android:background="@drawable/icon"
+			android:layout_centerInParent="true"
+			android:layout_above="@id/aboutTextView1"
+			android:id="@+id/aboutTextView2"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_width="wrap_content"
+			android:text="Ver 2.3"
+			android:layout_below="@id/aboutTextView1"
+			android:textColor="#AAFFFFFF"
+			android:layout_centerInParent="true"/>
+
+	</RelativeLayout>
 
 </LinearLayout>
 

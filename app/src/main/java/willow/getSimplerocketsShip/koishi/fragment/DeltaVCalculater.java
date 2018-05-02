@@ -49,6 +49,7 @@ public class DeltaVCalculater extends Fragment
 		tg = (TextInputLayout)view.findViewById(R.id.fragmentdeltavTextInputLayout4);
 		refer = (Button)view.findViewById(R.id.reference);
 		h.postDelayed(r, 1000);
+		g.setText("9.81");
 		View view2 = View.inflate(getActivity(), R.layout.dialog_reference, null);
 		b = new AlertDialog.Builder(getActivity());
 		b.setView(view2).setTitle(R.string.reference).setMessage(R.string.refer_intro);

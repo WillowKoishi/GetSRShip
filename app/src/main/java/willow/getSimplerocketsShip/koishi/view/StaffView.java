@@ -42,7 +42,7 @@ List<Snow> snowList=new ArrayList<Snow>();
 		canvas.drawColor(0xff0090ff);
 		if(time==1){
 			sm = (SensorManager)context.getSystemService(Context.SENSOR_SERVICE);
-			sm.registerListener(myAccelerometerListener, sm.getDefaultSensor(Sensor.TYPE_GRAVITY), SensorManager.SENSOR_DELAY_GAME); 
+			sm.registerListener(myAccelerometerListener, sm.getDefaultSensor(Sensor.TYPE_GRAVITY), SensorManager.SENSOR_DELAY_NORMAL); 
 		}
 		if(time<=240&&time%8==0){
 			for(int i=5;i<8;i++){

@@ -11,10 +11,24 @@ import android.support.design.widget.*;
 import android.widget.*;
 import android.text.*;
 import willow.getSimplerocketsShip.koishi.view.*;
+import android.content.*;
+import android.os.*;
+import android.support.design.widget.*;
+import android.support.v4.app.*;
+import android.support.v7.app.*;
+import android.text.*;
+import android.view.*;
+import android.widget.*;
+import java.util.*;
+import willow.getSimplerocketsShip.koishi.*;
+import android.widget.ExpandableListView.*;
+import android.widget.TextView.*;
+import com.hanks.htextview.HTextView;
+import com.hanks.htextview.HTextViewType;
 
 public class GetSandbox extends Fragment
 {
-	private TextInputEditText aet;
+	private EditText aet;
 	private AppCompatButton b;
 	private boolean can;
 	private TextInputLayout til;
@@ -26,7 +40,7 @@ public class GetSandbox extends Fragment
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
 		View view=inflater.inflate(R.layout.fragment_get_ship, container, false);
-		aet = (TextInputEditText)view.findViewById(R.id.frame_getship_edit);
+		aet = (EditText)view.findViewById(R.id.frame_getship_edit);
 		b = (AppCompatButton)view.findViewById(R.id.frame_getship_button);
 		til=(TextInputLayout)view.findViewById(R.id.fragment_til);
 		til.setHint(this.getString(R.string.hint_getsandbox));

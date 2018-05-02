@@ -20,6 +20,9 @@ android {
 }
 
 dependencies {
+	compile 'com.android.support:design:+'
+	compile 'com.android.support:appcompat-v7:+'
+	compile 'com.android.support:design:+'
 	compile project(':htextview-library')
 	//compile project(':htextview-base')
 	compile 'com.android.support:design:+'
