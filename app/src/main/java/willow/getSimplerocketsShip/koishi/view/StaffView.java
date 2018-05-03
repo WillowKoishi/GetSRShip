@@ -52,7 +52,7 @@ List<Snow> snowList=new ArrayList<Snow>();
 			Bitmap m=Bitmap.createScaledBitmap(snowBmp,wh,wh,false);
 			snow.map=m;
 			snow.y=-snow.map.getHeight();
-			snow.vy=getHeight()/100f;
+			snow.vy=getHeight()/80f;
 			snowList.add(snow);
 			}
 		}
