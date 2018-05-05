@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">GSRS2</string>
+    <string name="app_name">GSRS3</string>
     <string name="hello_world">Hello world!</string>
-    <string name="appname">SR下载器2</string>
+    <string name="appname">SR下载器3</string>
 	<string name="about">关于</string>
 	<string name="quit">退出</string>
 	<string name="whatnew">更新内容</string>
@@ -26,6 +26,7 @@
 	<string name="ksp">坎巴拉太空计划</string>
 	<string name="noId">你还没有输入任何内容!</string>
 	<string name="noLong">你输入的ID长度不够!</string>
+	<string name="back_again">再按一次返回键退出</string>
 	<string-array name="sr_engine">
 		<item>Tiny 21</item>
 		<item>Tiny 87</item>

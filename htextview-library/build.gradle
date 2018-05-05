@@ -5,12 +5,12 @@ apply plugin: 'com.jfrog.bintray'
 version = "0.1.5"
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 30
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 25
+        minSdkVersion 7
+        targetSdkVersion 30
         versionCode 8
         versionName "1.1.1"
         renderscriptTargetApi 19
@@ -26,7 +26,8 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
+  //  testCompile 'junit:junit:4.12'
+	compile 'com.android.support:cardview-v7:+'
     compile 'com.android.support:appcompat-v7:25.1.0'
 }
 

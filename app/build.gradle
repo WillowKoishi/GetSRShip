@@ -8,8 +8,8 @@ android {
         applicationId "willow.getSimplerocketsShip.koishi"
         minSdkVersion 15
         targetSdkVersion 29
-        versionCode 5145
-        versionName "Satori 2.3"
+        versionCode 5499
+        versionName "Satori 2.9"
     }
     buildTypes {
         release {
@@ -20,7 +20,7 @@ android {
 }
 
 dependencies {
-	compile 'com.android.support:design:+'
+	compile 'com.android.support:cardview-v7:+'
 	compile 'com.android.support:appcompat-v7:+'
 	compile 'com.android.support:design:+'
 	compile project(':htextview-library')
