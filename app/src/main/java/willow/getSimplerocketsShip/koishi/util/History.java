@@ -13,7 +13,7 @@ public class History
         this.historyList = data;
     }
 
-    public static class HistoryBase {
+    public  class HistoryBase {
         /**
          * type : true; 表示存档类型，true为火箭，false为沙盒
          * id : 1 表示存档id

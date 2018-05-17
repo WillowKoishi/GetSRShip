@@ -4,25 +4,34 @@
 	android:layout_width="match_parent"
 	android:layout_height="217dp"
 	android:orientation="vertical"
-	android:padding="16dp"
 	android:background="@color/colorPrimary"
 	android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:src="@drawable/kagiyana_hina"
+		android:scaleType="centerCrop"/>
 
 	<TextView
 		android:id="@+id/id_link"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
 		android:layout_alignParentBottom="true"
 		android:layout_marginBottom="16dp"
 		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:text="@string/appname"/>
+		android:text="@string/appname"
+		android:textColor="#FFFFFF"/>
 
 	<ImageView
 		android:layout_width="72dp"
+		android:layout_marginStart="16dp"
 		android:layout_height="72dp"
 		android:layout_above="@id/id_link"
 		android:layout_marginBottom="32dp"
-		android:src="@drawable/icon"/>
+		android:src="@drawable/icon"
+		android:visibility="gone"/>
 
 </RelativeLayout>
 

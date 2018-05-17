@@ -12,27 +12,30 @@
 		android:layout_height="match_parent"
 		android:id="@+id/appcompatmainCoordinatorLayout1">
 
+		<android.support.design.widget.AppBarLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<include
+				layout="@layout/toolbar"/>
+		</android.support.design.widget.AppBarLayout>
+			<FrameLayout
+				android:background="@android:color/transparent"
+				android:id="@+id/main_fragment"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				/>
+		
 		<android.support.design.widget.FloatingActionButton
 			android:id="@+id/fab_delete"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_margin="16dp"
 			android:onClick="onClickFab"
+			app:layout_behavior="willow.getSimplerocketsShip.koishi.view.MyFABBehavior"
+			app:layout_scrollFlags="scroll|enterAlways"
 			android:layout_gravity="end|bottom"
 			app:backgroundTint="@color/colorPrimaryDark"/>
-		
-		<android.support.design.widget.AppBarLayout
-			android:layout_width="match_parent"
-			android:layout_height="match_parent">
-			<include
-				layout="@layout/toolbar"/>
-
-			<FrameLayout
-				android:id="@+id/main_fragment"
-				android:layout_width="match_parent"
-				android:layout_height="match_parent"/>
-
-		</android.support.design.widget.AppBarLayout>
 
 	</android.support.design.widget.CoordinatorLayout>
 
@@ -42,6 +45,7 @@
 		android:layout_height="match_parent"
 		android:fitsSystemWindows="true"
 		android:layout_gravity="left"
+		app:layout_behavior=".AppCompatMain"
 		app:headerLayout="@layout/header_pic"
 		app:menu="@menu/menu_tools"/>
 

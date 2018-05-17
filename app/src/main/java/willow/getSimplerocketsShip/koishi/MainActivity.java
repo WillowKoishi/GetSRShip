@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity
 		dl = (DrawerLayout)this.findViewById(R.id.drawer_layout);
 		toolbar = (Toolbar)this.findViewById(R.id.toolbar);
 		ls = (ListView)this.findViewById(R.id.left_drawer);
-		toolbar.setTitle(R.string.appname);
+		toolbar.setTitle(R.string.appname2);
 		toolbar.setPopupTheme(R.style.ThemeOverlay_AppCompat_Light);
 		setSupportActionBar(toolbar);
 		getSupportActionBar().setHomeButtonEnabled(true); //设置返回键可用
@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity
 		dl.openDrawer(Gravity.LEFT);//push draw
 		FragmentManager fm=getSupportFragmentManager();
 		 transaction = fm.beginTransaction();
+		 transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
 		ef1=new GetSRShip(); /* * add是将一个fragment实例添加到Activity的最上层 * replace替换containerViewId中的fragment实例， * 注意，它首先把containerViewId中所有fragment删除，然后再add进去当前的fragment * */
 		ef1.pushSR(canOpenSR);
 		ef2=new GetSandbox();
@@ -88,19 +89,23 @@ public class MainActivity extends AppCompatActivity
 				public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4)
 				{FragmentManager fm=getSupportFragmentManager();
 					transaction = fm.beginTransaction();
+					transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
 					transaction.hide(ef1);
 					transaction.hide(ef2);
 					transaction.hide(ef3);
 					switch((int)(p4)){
 						case 0:
+							//transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
 							transaction.show(ef1);
 							//transaction.commit();
 							break;
 						case 1:
+							//transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
 							transaction.show(ef2);
 							//transaction.commit();
 							break;
 						case 2:
+							//transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
 							transaction.show(ef3);
 							break;
 					}

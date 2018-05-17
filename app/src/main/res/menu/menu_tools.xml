@@ -2,15 +2,24 @@
 	<group android:checkableBehavior="single">
     <item
         android:id="@+id/get_ship"
-		android:icon="@drawable/icon"
+		android:icon="@drawable/ic_label_black_48dp"
         android:title="@string/item_getship"/>
 	<item
         android:id="@+id/get_sandbox"
-		android:icon="@drawable/icon"
+		android:icon="@drawable/ic_language_black_48dp"
         android:title="@string/item_getsandbox"/>
 	<item
         android:id="@+id/cal_dv"
-		android:icon="@drawable/icon"
+		android:icon="@drawable/ic_invert_colors_black_48dp"
         android:title="@string/item_DV"/>
+	<item
+		android:id="@+id/fire_control"
+		android:icon="@drawable/icon"
+		android:title="@string/item_FC"/>
+		
+		<item
+			android:id="@+id/old_ui"
+			android:icon="@drawable/ic_assignment_return_black_48dp"
+			android:title="@string/item_old"/>
     </group>
 </menu>

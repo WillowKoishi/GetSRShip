@@ -4,6 +4,7 @@
     <string name="app_name">GSRS3</string>
     <string name="hello_world">Hello world!</string>
     <string name="appname">GetSRShip3</string>
+	<string name="appname2">GetSRShip2</string>
 	<string name="about">About</string>
 	<string name="quit">Quit</string>
 	<string name="whatnew">What is new</string>
@@ -15,6 +16,9 @@
 	<string name="item_getship">Download Ship</string>
 	<string name="item_getsandbox">Download Sandbox</string>
 	<string name="item_DV">∆V Calculater</string>
+	<string name="item_old">Old UI</string>
+	<string name="ship">Ship</string>
+	<string name="sandbox">Sandbox</string>
 	<string name="isp">Specific impulse</string>
 	<string name="m">Total weight</string>
 	<string name="m0">Empty weight</string>

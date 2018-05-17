@@ -7,16 +7,18 @@ import android.support.v7.widget.*;
 import android.support.v4.app.*;
 import android.os.*;
 import android.view.*;
+import android.content.*;
+import willow.getSimplerocketsShip.koishi.appcompat.*;
 
 
 public class AppCompatMain extends AppCompatActivity
 {
-private DrawerLayout drawer;
-private NavigationView NaView;
-private AppCompatGetShip acgs;
-private FloatingActionButton fab;
-private Toolbar toolbar;
-private CoordinatorLayout coordinatorLayout;
+	private DrawerLayout drawer;
+	private NavigationView NaView;
+	private AppCompatGetShip acgs;
+	private FloatingActionButton fab;
+	private Toolbar toolbar;
+	private CoordinatorLayout coordinatorLayout;
 	private FragmentTransaction fragmentTransaction;
 
 	private long startTime;
@@ -70,13 +72,21 @@ private CoordinatorLayout coordinatorLayout;
 				public boolean onNavigationItemSelected(MenuItem menuItem)
 				{
 					menuItem.setChecked(true);
+					switch(menuItem.getItemId()){
+						case R.id.old_ui:
+							startActivity(new Intent(AppCompatMain.this,MainActivity.class));
+							break;
+						case R.id.fire_control:
+							startActivity(new Intent(AppCompatMain.this,FireControl.class));
+							break;
+					}
 					drawer.closeDrawers();
 					return true;
 				}
 			});
     }
 
-	
+
 	@Override  
 	public void onBackPressed() {  
 
