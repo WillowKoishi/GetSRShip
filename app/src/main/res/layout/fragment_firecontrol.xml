@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:id="@+id/appcompatmainCoordinatorLayout1">
+
+	<android.support.design.widget.AppBarLayout
+		android:layout_width="match_parent"
+		app:layout_scrollFlags="scroll|enterAlways"
+		android:layout_height="wrap_content">
+
+		<include
+			layout="@layout/toolbar"/>
+
+	</android.support.design.widget.AppBarLayout>
+
+	<LinearLayout
+		app:layout_behavior="@string/appbar_scrolling_view_behavior"
+		android:layout_height="wrap_content"
+		app:layout_scrollFlags="scroll|enterAlways"
+		android:layout_width="match_parent"
+		android:orientation="vertical">
+
+		<android.support.design.widget.TextInputLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/fragmentdeltavTextInputLayout1">
+
+			<EditText
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:ems="10"
+				android:hint="自身速率"
+				android:inputType="numberDecimal"
+				android:id="@+id/fragment_deltav_isp"/>
+
+		</android.support.design.widget.TextInputLayout>
+
+		<android.support.design.widget.TextInputLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/fragmentdeltavTextInputLayout1">
+
+			<EditText
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:ems="10"
+				android:hint="自身速率与相对目标夹角"
+				android:inputType="numberDecimal"
+				android:id="@+id/fragment_deltav_isp"/>
+
+		</android.support.design.widget.TextInputLayout>
+
+		<android.support.design.widget.TextInputLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/fragmentdeltavTextInputLayout1">
+
+			<EditText
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:ems="10"
+				android:hint="相对速率"
+				android:inputType="numberDecimal"
+				android:id="@+id/fragment_deltav_isp"/>
+
+		</android.support.design.widget.TextInputLayout>
+
+		<android.support.design.widget.TextInputLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/fragmentdeltavTextInputLayout1">
+
+			<EditText
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:ems="10"
+				android:hint="目标方向与自身速率夹角"
+				android:inputType="numberDecimal"
+				android:id="@+id/fragment_deltav_isp"/>
+
+		</android.support.design.widget.TextInputLayout>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="vertical"
+			android:gravity="left">
+
+			<CheckBox
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"/>
+
+			<android.support.design.widget.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/fragmentdeltavTextInputLayout1">
+
+				<EditText
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:ems="10"
+					android:hint="自定义撞击速度?"
+					android:inputType="numberDecimal"
+					android:id="@+id/fragment_deltav_isp">
+
+				</EditText>
+
+			</android.support.design.widget.TextInputLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+

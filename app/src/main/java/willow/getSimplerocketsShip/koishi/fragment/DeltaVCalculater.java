@@ -200,7 +200,10 @@ public class DeltaVCalculater extends Fragment
 		@Override
 		public void onClick(View p1)
 		{
-			a.show();
+		a.show();
+			//willow.getSimplerocketsShip.koishi.	appcompat.AppCompatMain ccc=(
+			//willow.getSimplerocketsShip.koishi.appcompat.AppCompatMain)getActivity();
+			//ccc.hideMe();
 		}
 	};
 	class FuckingMan extends BaseExpandableListAdapter
@@ -303,4 +306,5 @@ public class DeltaVCalculater extends Fragment
 		}
 		
 	}
+	
 }

@@ -1,8 +1,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-	<group android:checkableBehavior="single">
+	<group 
+		
+		>
     <item
         android:id="@+id/get_ship"
-		android:icon="@drawable/ic_label_black_48dp"
+		android:icon="@drawable/ic_rocket"
         android:title="@string/item_getship"/>
 	<item
         android:id="@+id/get_sandbox"

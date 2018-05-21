@@ -77,7 +77,7 @@ public class AppCompatMain extends AppCompatActivity
 							startActivity(new Intent(AppCompatMain.this,MainActivity.class));
 							break;
 						case R.id.fire_control:
-							startActivity(new Intent(AppCompatMain.this,FireControl.class));
+							//startActivity(new Intent(AppCompatMain.this,FireControl.class));
 							break;
 					}
 					drawer.closeDrawers();
